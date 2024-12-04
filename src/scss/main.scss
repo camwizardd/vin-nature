@@ -82,6 +82,10 @@ main {
   gap: 6px;
   width: fit-content;
   background: var(--beige, #f6efdd);
+  text-decoration-line: underline;
+  img {
+    width: 13px;
+  }
 }
 
 .head {
@@ -236,17 +240,22 @@ main {
 }
 
 .vignerons-section {
+  position: relative;
   .image-vigneron {
     img {
       width: 100%;
     }
   }
   .content-bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 12px;
+    right: 12px;
+    width: fit-content;
     padding: 16px;
-    padding-top: 123px;
+    padding-top: 50px;
     display: flex;
     align-items: flex-end;
-    margin-top: -239px;
     background: linear-gradient(
       180deg,
       rgba(255, 252, 246, 0) 0%,
@@ -256,7 +265,6 @@ main {
     .right-content {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
       .small-title {
         color: var(--beige, #f6efdd);
         font-family: "Dirtyline 36Daysoftype 2022";
