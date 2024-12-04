@@ -1,3 +1,5 @@
+@import "bootstrap/scss/bootstrap-grid";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,4 +13,45 @@ a {
 img,
 video {
   display: block;
+}
+
+.row + .row {
+  margin-top: 16px;
+}
+
+.row > .col,
+.row > [class^="col-"] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+}
+
+@font-face {
+  font-family: "Dirtyline";
+  src: url(../fonts/dirtyline_36daysoftype_2022-webfont.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Afacad";
+  src: url(../fonts/afacad-variablefont_wght-webfont.woff2) format("woff2");
+}
+
+:root {
+  --dark-purple: #291d29;
+  --dark-beige: #d5caaf;
+  --beige: #f6efdd;
+  --olive: #56541c;
+  --dark-olive: #454313;
+}
+
+.container {
+  margin: 20px;
+  margin-left: 162px;
+  margin-right: 162px;
+}
+
+body {
+  padding: 38px 46px;
+  font-family: "Afacad";
 }
