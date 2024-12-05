@@ -18,14 +18,13 @@ video {
 .row + .row {
   margin-top: 16px;
 }
-
-/*.row > .col,
+/*
+.row > .col,
 .row > [class^="col-"] {
   padding-top: 12px;
   padding-bottom: 12px;
-  border: 1px solid rgba(86, 61, 124, 0.2);
+  border: 1px solid rgba(86, 61, 124, 0.683);
 }*/
-
 @font-face {
   font-family: "Dirtyline";
   src: url(../fonts/dirtyline_36daysoftype_2022-webfont.woff2) format("woff2");
@@ -47,6 +46,7 @@ video {
 body {
   font-family: "Afacad";
   font-size: 15px;
+  background: #fffdf8;
 }
 
 .title {
@@ -99,7 +99,6 @@ main {
   .nav {
     display: flex;
     width: 100%;
-    height: 62px;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
@@ -133,8 +132,22 @@ main {
         gap: 47px;
         background: var(--olive, #56541c);
         color: var(--beige, #f6efdd);
+        a {
+          text-decoration: none;
+        }
         img {
           height: 17px;
+        }
+        .bars {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 14px;
+          .bar {
+            width: 44px;
+            height: 2px;
+            background-color: var(--beige, #f6efdd);
+          }
         }
       }
     }
@@ -274,5 +287,121 @@ main {
         color: var(--beige, #f6efdd);
       }
     }
+  }
+}
+
+.burger-open {
+  background: var(--olive, #56541c);
+  height: 100vh;
+  color: var(--beige, #f6efdd);
+  padding: 38px 46px 100px 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .nav-burger {
+    display: flex;
+    height: 62px;
+    justify-content: space-between;
+    align-items: center;
+    .nav-title {
+      font-size: 24px;
+    }
+
+    .right-nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 24px;
+      .profile {
+        width: 80px;
+      }
+      .language {
+        display: flex;
+        padding: 8px 11px;
+        align-items: center;
+        gap: 9px;
+        border: 1px solid var(--beige, #f6efdd);
+        .mini-icon {
+          height: 8px;
+        }
+      }
+      .menu {
+        display: flex;
+        height: 62px;
+        padding: 21px 30px;
+        align-items: center;
+        gap: 47px;
+        background: var(--olive, #56541c);
+        color: var(--beige, #f6efdd);
+        a {
+          text-decoration: none;
+        }
+        img {
+          height: 17px;
+        }
+        .bars {
+          position: relative;
+          width: 44px;
+          height: 44px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .bar {
+          position: absolute;
+          width: 44px;
+          height: 2px;
+          background-color: var(--beige, #f6efdd);
+          top: 50%;
+          left: 0;
+          transform-origin: center;
+        }
+
+        .bar:nth-child(1) {
+          transform: rotate(45deg);
+        }
+
+        .bar:nth-child(2) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+.category {
+  color: var(--beige, #f6efdd);
+}
+
+.content-left {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.content-right {
+  height: 358px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-start;
+  gap: 24px;
+  .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    img {
+      height: 32px;
+    }
+  }
+  .nav-secondary {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
   }
 }
