@@ -24,30 +24,11 @@ video {
   padding-top: 12px;
   padding-bottom: 12px;
   border: 1px solid rgba(86, 61, 124, 0.683);
-}*/
+}
+*/
 @font-face {
   font-family: "Dirtyline";
   src: url(../fonts/dirtyline_36daysoftype_2022-webfont.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Afacad";
-  src: url(../fonts/afacad-variablefont_wght-webfont.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font-Awsome-Brands";
-  src: url(../fonts/FontAwesome6Brands-Regular.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font-Awsome-Regular";
-  src: url(../fonts/FontAwesome6Free-Regular.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Font-Awsome-Solid";
-  src: url(../fonts/FontAwesome6Free-Solid.woff2) format("woff2");
 }
 
 :root {
@@ -121,7 +102,51 @@ a {
     color: var(--beige, #f6efdd);
   }
 }
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
 
+  .logo {
+    width: 275px;
+    height: 46px;
+  }
+  .right-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+
+    .menu {
+      display: flex;
+      height: 62px;
+      padding: 21px 30px;
+      align-items: center;
+      gap: 47px;
+      background: var(--olive, #56541c);
+      color: var(--beige, #f6efdd);
+      a {
+        text-decoration: none;
+      }
+      img {
+        height: 17px;
+      }
+      .bars {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 14px;
+        .bar {
+          width: 44px;
+          height: 2px;
+          background-color: var(--beige, #f6efdd);
+        }
+      }
+    }
+  }
+}
 .head {
   padding: 38px 46px 0px 46px;
   background: var(--beige, #f6efdd);
@@ -130,51 +155,6 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  .nav {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-
-    .logo {
-      width: 275px;
-      height: 46px;
-    }
-    .right-nav {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 24px;
-
-      .menu {
-        display: flex;
-        height: 62px;
-        padding: 21px 30px;
-        align-items: center;
-        gap: 47px;
-        background: var(--olive, #56541c);
-        color: var(--beige, #f6efdd);
-        a {
-          text-decoration: none;
-        }
-        img {
-          height: 17px;
-        }
-        .bars {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          gap: 14px;
-          .bar {
-            width: 44px;
-            height: 2px;
-            background-color: var(--beige, #f6efdd);
-          }
-        }
-      }
-    }
-  }
 
   .title-section {
     display: flex;
@@ -600,4 +580,86 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 51px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  p {
+    font-weight: 700;
+    display: inline;
+  }
+}
+
+header {
+  display: flex;
+  padding: 38px 0px 59px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 68px;
+  background: var(--beige, #f6efdd);
+}
+
+.wine-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 106px;
+  position: relative;
+  .content {
+    display: flex;
+    width: 546px;
+    flex-direction: column;
+    gap: 85px;
+    .content-top {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      align-self: stretch;
+    }
+    .content-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 85px;
+      .right-part {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .price {
+          font-size: 24px;
+          p {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  .wine {
+    position: absolute;
+    left: -170px;
+    bottom: -300px;
+    img {
+      height: 900px;
+    }
+  }
+}
+
+.detail {
+  display: flex;
+  width: 549px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  h2 {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 400;
+  }
 }
