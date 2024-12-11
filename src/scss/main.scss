@@ -663,3 +663,40 @@ header {
     font-weight: 400;
   }
 }
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.products-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.products {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s ease;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
