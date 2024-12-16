@@ -341,12 +341,15 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  position: relative;
+  overflow: hidden;
   .nav-burger {
     display: flex;
     height: 62px;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1;
     .nav-title {
       font-size: 24px;
     }
@@ -415,13 +418,14 @@ a {
   .category {
     color: var(--beige, #f6efdd);
   }
-
+  .front {
+    z-index: 1;
+  }
   .content-left {
     display: flex;
     flex-direction: column;
     gap: 26px;
   }
-
   .content-right {
     height: 358px;
     display: flex;
@@ -444,6 +448,15 @@ a {
       flex-direction: column;
       align-items: flex-start;
       gap: 9px;
+    }
+  }
+  .background-img-menu {
+    position: absolute;
+    top: -100px;
+    left: 100px;
+
+    img {
+      width: 100%;
     }
   }
 }
@@ -604,6 +617,7 @@ header {
 .wine-container {
   display: flex;
   width: 100%;
+  height: 450px;
   justify-content: flex-end;
   align-items: center;
   gap: 106px;
@@ -710,4 +724,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.background-img-index {
+  img {
+    height: 795px;
+  }
 }
