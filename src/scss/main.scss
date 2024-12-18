@@ -47,6 +47,10 @@ body {
   overflow-x: hidden;
 }
 
+/*html {
+  scrollbar-gutter: stable;
+}*/
+
 .title {
   color: var(--dark-purple, #291d29);
   font-family: "Dirtyline 36Daysoftype 2022";
@@ -70,6 +74,9 @@ main {
   border: 1px solid var(--dark-purple, #291d29);
   width: fit-content;
   transition: background 0.5s, color 0.5s;
+  .--fa-inverse {
+    transition: color 0.5s;
+  }
 }
 
 .button-stroke:hover {
@@ -96,17 +103,18 @@ a {
   width: fit-content;
   background: var(--beige, #f6efdd);
   transition: background 0.5s, color 0.5s;
-  .--fa-inverse {
-    transition: 0.5s;
-  }
+}
+
+.button-fill .--fa-inverse {
+  transition: color 0.5s;
 }
 
 .button-fill:hover {
   background: var(--olive, #56541c);
   color: var(--beige, #f6efdd);
-  .--fa-inverse {
-    color: var(--beige, #f6efdd);
-  }
+}
+.button-fill:hover .--fa-inverse {
+  color: var(--beige, #f6efdd);
 }
 
 .nav {
@@ -378,45 +386,7 @@ a {
         }
       }
       .menu {
-        display: flex;
-        height: 62px;
-        padding: 21px 30px;
-        align-items: center;
-        gap: 47px;
-        background: var(--olive, #56541c);
-        color: var(--beige, #f6efdd);
-        a {
-          text-decoration: none;
-        }
-        img {
-          height: 17px;
-        }
-        .bars {
-          position: relative;
-          width: 44px;
-          height: 44px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .bar {
-          position: absolute;
-          width: 44px;
-          height: 2px;
-          background-color: var(--beige, #f6efdd);
-          top: 50%;
-          left: 0;
-          transform-origin: center;
-        }
-
-        .bar:nth-child(1) {
-          transform: rotate(45deg);
-        }
-
-        .bar:nth-child(2) {
-          transform: rotate(-45deg);
-        }
+        width: 187px;
       }
     }
   }
@@ -751,7 +721,7 @@ header {
 .parallax {
   background-image: url("../img/illustration.png");
   top: 0;
-  right: -100px;
+  right: 0;
 }
 .parallax2 {
   background-image: url(../img/illustration-1.png);
@@ -761,7 +731,7 @@ header {
 .parallax3 {
   background-image: url(../img/illustration-2.png);
   bottom: 0;
-  right: -100px;
+  right: 0;
 }
 
 .burger {
@@ -776,13 +746,52 @@ header {
   left: 0;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s;
   transform: translateY(-100%);
-  transition: transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .menu-opened.is-active {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.burger .bar {
+  transition: transform 0.3s;
+}
+
+.burger.is-active {
+  .menu {
+    padding-right: 45px;
+  }
+  .bars {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bar {
+    position: absolute;
+    width: 44px;
+    height: 2px;
+    background-color: var(--beige, #f6efdd);
+    top: 50%;
+    left: 0;
+    transform-origin: center;
+  }
+
+  .bar:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .bar:nth-child(2) {
+    transform: rotate(-45deg);
+  }
 }

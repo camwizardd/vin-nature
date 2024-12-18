@@ -51,5 +51,7 @@ var burger = document.querySelector(".burger");
 var menu = document.querySelector(".menu-opened");
 var toggleMenu = function toggleMenu() {
   menu.classList.toggle("is-active");
+  document.body.classList.toggle("no-scroll");
+  burger.classList.toggle("is-active");
 };
 burger.addEventListener("click", toggleMenu);
