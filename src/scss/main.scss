@@ -464,6 +464,12 @@ a {
       width: 100%;
     }
   }
+  .bar {
+    background-color: var(--beige, #f6efdd);
+    height: 10px;
+    display: inline;
+    width: 50px;
+  }
 }
 
 .tasting-content {
@@ -612,7 +618,7 @@ footer {
 
 header {
   display: flex;
-  padding: 38px 0px 59px 0px;
+  padding: 38px 46px 59px 46px;
   flex-direction: column;
   align-items: center;
   gap: 68px;
@@ -756,4 +762,27 @@ header {
   background-image: url(../img/illustration-2.png);
   bottom: 0;
   right: -100px;
+}
+
+.burger {
+  z-index: 1;
+}
+
+.menu-opened {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.menu-opened.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
