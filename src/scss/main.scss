@@ -44,6 +44,7 @@ body {
   font-family: "Afacad";
   font-size: 15px;
   background: #fffdf8;
+  overflow-x: hidden;
 }
 
 .title {
@@ -58,6 +59,7 @@ main {
   align-items: center;
   gap: 194px;
   padding: 152px 162px;
+  position: relative;
 }
 
 .button-stroke {
@@ -94,6 +96,9 @@ a {
   width: fit-content;
   background: var(--beige, #f6efdd);
   transition: background 0.5s, color 0.5s;
+  .--fa-inverse {
+    transition: 0.5s;
+  }
 }
 
 .button-fill:hover {
@@ -726,8 +731,29 @@ header {
   align-items: center;
 }
 
-.background-img-index {
-  img {
-    height: 795px;
-  }
+.parallax,
+.parallax2,
+.parallax3 {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  z-index: -1;
+}
+.parallax {
+  background-image: url("../img/illustration.png");
+  top: 0;
+  right: -100px;
+}
+.parallax2 {
+  background-image: url(../img/illustration-1.png);
+  top: 500px;
+  right: 1000px;
+}
+.parallax3 {
+  background-image: url(../img/illustration-2.png);
+  bottom: 0;
+  right: -100px;
 }
